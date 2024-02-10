@@ -1,0 +1,75 @@
+title: Notebook
+about: schu/notebook
+about_url: https://github.com/schu/notebook
+plugins:
+  datasette-graphql:
+    path: /-/graphql
+  datasette-atom:
+    allow_unsafe_html_in_canned_queries: true
+  datasette-block-robots:
+    literal: |-
+      User-agent: *
+      Disallow: /notebook
+  datasette-sitemap:
+    sql: |-
+      select '/' || topic || '/' || slug as path from note
+databases:
+  notebook:
+    queries:
+      search: |
+        select
+          notes_fts.rank,
+          notes.*,
+          snippet(notes_fts, -1, 'b4de2a49c8', '8c94a2ed4b', '...', 60) as snippet # https://www.sqlite.org/fts3.html#snippet
+        from
+          notes
+          join notes_fts on notes.rowid = notes_fts.rowid
+        where
+          notes_fts match case
+            :q
+            when '' then 'nomatchforthisterm'
+            else escape_fts(:q)
+          end
+        order by
+          notes_fts.rank limit 40
+      feed:
+        title: schu's notebook
+        sql: |-
+          SELECT
+            'tag:notebook.schu.io,2024-02-10:' || path as atom_id,
+            title as atom_title,
+            'https://notebook.schu.io/' || topic || '/' || slug as atom_link,
+            created_utc as atom_updated,
+            html as atom_content_html,
+            'Michael Schubert' as atom_author_name,
+            'https://www.schu.io/' as atom_author_uri
+          FROM
+            notes
+          order by
+            created_utc desc
+          limit
+            15
+      feed_by_topic:
+        title: schu's notebook for topic
+        sql: |-
+          SELECT
+            'tag:notebook.schu.io,2024-02-10:' || path as atom_id,
+            title as atom_title,
+            'https://notebook.schu.io/' || topic || '/' || slug as atom_link,
+            created_utc as atom_updated,
+            html as atom_content_html,
+            'Michael Schubert' as atom_author_name,
+            'https://www.schu.io/' as atom_author_uri
+          FROM
+            notes
+          where
+            topic = :topic
+          order by
+            created_utc desc
+          limit
+            15
+    tables:
+      notes:
+        sort_desc: updated_utc
+        facets:
+        - topic

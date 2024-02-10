@@ -1,0 +1,68 @@
+{% extends "notebook_base.html" %}
+
+{% set notes = sql("""
+    select * from notes where path = :topic || '_' || :slug || '.md'
+""", {"topic": topic, "slug": slug}, database="notebook")
+%}
+{% set note = notes[0] %}
+{% if not notes %}
+    {% set raised = raise_404("Note not found") %}
+{% endif %}
+
+{% block title %}{{ note.title }} | schu's notebook{% endblock %}
+
+{% block body %}
+<h1>{{ note.title }}</h1>
+
+{{ note.html|safe }}
+
+<p class="created">Created {{ note.created }}{% if note.created != note.updated %}, updated {{ note.updated }} &middot; <a href="{{ note.url|replace("https://github.com/schu/notebook/blob/", "https://github.com/schu/notebook/commits/") }}">History</a>{% endif %} &middot; <a href="{{ note.url }}">Edit</a></p>
+
+<script>
+// Add visible # links to all h2+ headings
+document.querySelectorAll('h2,h3,h4,h5,h6').forEach(el => {
+  // New style of links
+  let id = null;
+  let newStyle = el.querySelector('.heading-link');
+  if (newStyle) {
+    // Keep using existing ID on element
+    id = el.getAttribute('id');
+    // Need to pull the text out of the link
+    let text = newStyle.innerText;
+    el.removeChild(newStyle);
+    el.innerText = text;
+  } else {
+    let anchor = el.querySelector('a.anchor');
+    if (anchor) {
+      id = anchor.getAttribute('id');
+      el.removeChild(anchor);
+    }
+  }
+  if (!id) {
+    return;
+  }
+  el.setAttribute('id', id);
+  let hashLink = document.createElement('a');
+  hashLink.style.textDecoration = 'none';
+  hashLink.style.color = '#b7b3b3';
+  hashLink.style.fontSize = '0.8em';
+  hashLink.setAttribute('href', '#' + id);
+  hashLink.innerText = '#';
+  el.appendChild(document.createTextNode(' '));
+  // Add that link
+  el.appendChild(hashLink);
+});
+
+// Add an audio player after any .wav or .mp3 links
+// Get all anchor tags on the page
+document.querySelectorAll('a[href$=".wav"],a[href$=".mp3"],a[href$=".m4a"]').forEach(function(link) {
+  var href = link.getAttribute('href');
+  var audio = document.createElement('audio');
+  audio.controls = true;  // Show controls
+  audio.src = href;
+  var paragraph = document.createElement('p');
+  paragraph.appendChild(audio);
+  link.insertAdjacentElement('afterend', paragraph);
+});
+</script>
+{% endblock %}

@@ -1,0 +1,11 @@
+GitPython
+sqlite-utils
+beautifulsoup4
+datasette
+datasette-atom
+datasette-publish-fly
+datasette-template-sql
+datasette-graphql
+datasette-block-robots
+datasette-sitemap
+s3-credentials
