@@ -12,5 +12,5 @@ Inspired by and adapted from Simon Willison:
 <!-- index starts -->
 ## demo
 
-* [Hello World](https://github.com/schu/notebook/blob/main/demo/hello-world.md) - 2024-02-10
+* [Hello World](https://github.com/schu/notebook/blob/main/demo/hello-world.md) - 2024-02-12
 <!-- index ends -->
