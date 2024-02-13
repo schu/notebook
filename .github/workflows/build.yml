@@ -26,6 +26,8 @@ jobs:
         key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
         restore-keys: |
           ${{ runner.os }}-pip-
+    - name: Set up flyctl
+      uses: superfly/flyctl-actions/setup-flyctl@master
     - name: Install Python dependencies
       run: |
         python -m pip install --upgrade pip
@@ -64,26 +66,9 @@ jobs:
     #     AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
     #   run: |-
     #     s3-credentials put-object til.simonwillison.net tils.db main/tils.db
-    #
-    # - name: Deploy Datasette using fly.io
-    #   env:
-    #     NOW_TOKEN: ${{ secrets.NOW_TOKEN }}
-    #   run: |-
-    #     cd main
-    #     datasette publish vercel tils.db \
-    #       --token $NOW_TOKEN \
-    #       --project simon-til \
-    #       --scope datasette \
-    #       --metadata metadata.yaml \
-    #       --static static:static \
-    #       --install datasette-template-sql \
-    #       --install "datasette-sitemap>=1.0" \
-    #       --install "datasette-atom>=0.7" \
-    #       --install datasette-json-html \
-    #       --install beautifulsoup4 \
-    #       --install "datasette-debug-asgi>=1.1" \
-    #       --install "datasette-graphql>=2.2" \
-    #       --install datasette-block-robots \
-    #       --plugins-dir plugins \
-    #       --template-dir templates \
-    #       --public
+    - name: Deploy Datasette using fly.io
+      env:
+        FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
+      run: |-
+        cd main
+        ./publish
