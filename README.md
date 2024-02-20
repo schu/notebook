@@ -7,7 +7,7 @@ Inspired by and adapted from Simon Willison:
 * https://simonwillison.net/2020/Apr/20/self-rewriting-readme/
 * https://github.com/simonw/til
 
-<!-- count starts -->3<!-- count ends --> notes so far.
+<!-- count starts -->4<!-- count ends --> notes so far.
 
 <!-- index starts -->
 ## demo
@@ -21,4 +21,8 @@ Inspired by and adapted from Simon Willison:
 ## typst
 
 * [Typst: hide footer page counter on some pages](https://github.com/schu/notebook/blob/main/typst/typst-hide-page-counter-on-some-pages.md) - 2024-02-14
+
+## mssql
+
+* [MSSQL to JSON export](https://github.com/schu/notebook/blob/main/mssql/mssql-to-json-export.md) - 2024-02-21
 <!-- index ends -->
