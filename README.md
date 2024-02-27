@@ -7,7 +7,7 @@ Inspired by and adapted from Simon Willison:
 * https://simonwillison.net/2020/Apr/20/self-rewriting-readme/
 * https://github.com/simonw/til
 
-<!-- count starts -->4<!-- count ends --> notes so far.
+<!-- count starts -->5<!-- count ends --> notes so far.
 
 <!-- index starts -->
 ## demo
@@ -25,4 +25,8 @@ Inspired by and adapted from Simon Willison:
 ## mssql
 
 * [MSSQL to JSON export](https://github.com/schu/notebook/blob/main/mssql/mssql-to-json-export.md) - 2024-02-21
+
+## git
+
+* [Git post-receive hook for static site deployments](https://github.com/schu/notebook/blob/main/git/git-post-receive-hook.md) - 2024-02-28
 <!-- index ends -->
