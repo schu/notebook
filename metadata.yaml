@@ -16,11 +16,12 @@ plugins:
 databases:
   notebook:
     queries:
+      # https://www.sqlite.org/fts3.html#snippet
       search: |
         select
           notes_fts.rank,
           notes.*,
-          snippet(notes_fts, -1, 'b4de2a49c8', '8c94a2ed4b', '...', 60) as snippet # https://www.sqlite.org/fts3.html#snippet
+          snippet(notes_fts, -1, 'b4de2a49c8', '8c94a2ed4b', '...', 60) as snippet
         from
           notes
           join notes_fts on notes.rowid = notes_fts.rowid
