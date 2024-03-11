@@ -7,7 +7,7 @@ Inspired by and adapted from Simon Willison:
 * https://simonwillison.net/2020/Apr/20/self-rewriting-readme/
 * https://github.com/simonw/til
 
-<!-- count starts -->6<!-- count ends --> notes so far.
+<!-- count starts -->7<!-- count ends --> notes so far.
 
 <!-- index starts -->
 ## demo
@@ -33,4 +33,8 @@ Inspired by and adapted from Simon Willison:
 ## duckdb
 
 * [DuckDB: aggregate multiple rows into a single JSON object](https://github.com/schu/notebook/blob/main/duckdb/duckdb-rows-to-json-aggregation.md) - 2024-02-29
+
+## javascript
+
+* [JavaScript Cheatsheet](https://github.com/schu/notebook/blob/main/javascript/javascript-cheatsheet.md) - 2024-03-11
 <!-- index ends -->
