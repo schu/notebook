@@ -7,7 +7,7 @@ For example, with the [SQLite](https://duckdb.org/docs/extensions/sqlite) and
 [MySQL extension](https://duckdb.org/docs/extensions/mysql.html):
 
 ```sql
-ATTACH 'host=HOST user=USER port=0 database=DATABASE password=PASSWORD' AS src (TYPE mysql);
+ATTACH 'host=HOST port=0 database=DATABASE user=USER password=PASSWORD' AS src (TYPE mysql);
 
 ATTACH 'mydb.sqlite3' AS dst (TYPE sqlite);
 
