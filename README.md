@@ -7,7 +7,7 @@ Inspired by and adapted from Simon Willison:
 * https://simonwillison.net/2020/Apr/20/self-rewriting-readme/
 * https://github.com/simonw/til
 
-<!-- count starts -->9<!-- count ends --> notes so far.
+<!-- count starts -->10<!-- count ends --> notes so far.
 
 <!-- index starts -->
 ## demo
@@ -39,4 +39,8 @@ Inspired by and adapted from Simon Willison:
 ## javascript
 
 * [JavaScript Cheatsheet](https://github.com/schu/notebook/blob/main/javascript/javascript-cheatsheet.md) - 2024-03-11
+
+## security
+
+* [Notes on the XZ backdoor (CVE-2024-3094)](https://github.com/schu/notebook/blob/main/security/xz-backdoor-CVE-2024-3094.md) - 2024-04-05
 <!-- index ends -->
