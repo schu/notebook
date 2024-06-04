@@ -2,13 +2,13 @@
 
 List apps for which incoming connections are allowed or blocked.
 
-## CLI
+Via CLI:
 
 ```
 sudo /usr/libexec/ApplicationFirewall/socketfilterfw --listapps
 ```
 
-## Via settings
+Via settings:
 
 ```
 Settings -> Network -> Firewall -> Options...
