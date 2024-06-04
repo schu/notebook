@@ -7,7 +7,7 @@ Inspired by and adapted from Simon Willison:
 * https://simonwillison.net/2020/Apr/20/self-rewriting-readme/
 * https://github.com/simonw/til
 
-<!-- count starts -->10<!-- count ends --> notes so far.
+<!-- count starts -->11<!-- count ends --> notes so far.
 
 <!-- index starts -->
 ## demo
@@ -43,4 +43,8 @@ Inspired by and adapted from Simon Willison:
 ## security
 
 * [Notes on the XZ backdoor (CVE-2024-3094)](https://github.com/schu/notebook/blob/main/security/xz-backdoor-CVE-2024-3094.md) - 2024-04-05
+
+## macos
+
+* [macOS: list allowed incoming connections](https://github.com/schu/notebook/blob/main/macos/macos-list-allowed-incoming-connections.md) - 2024-06-04
 <!-- index ends -->
