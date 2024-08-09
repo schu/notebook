@@ -7,6 +7,21 @@ Inspired by and adapted from Simon Willison:
 * https://simonwillison.net/2020/Apr/20/self-rewriting-readme/
 * https://github.com/simonw/til
 
+## Development
+
+<details>
+
+### Running locally
+
+```
+python build_database.py
+./datasette-serve
+```
+
+</details>
+
+## Notes
+
 <!-- count starts -->11<!-- count ends --> notes so far.
 
 <!-- index starts -->
