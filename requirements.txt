@@ -6,31 +6,27 @@
 #
 aiofiles==24.1.0
     # via datasette
-aniso8601==9.0.1
-    # via graphene
-anyio==4.4.0
+anyio==4.8.0
     # via httpx
-appdirs==1.4.4
-    # via pint
-asgi-csrf==0.9
+asgi-csrf==0.11
     # via datasette
 asgiref==3.8.1
     # via datasette
-beautifulsoup4==4.12.3
+beautifulsoup4==4.13.3
     # via -r requirements.in
-bleach==6.1.0
+bleach==6.2.0
     # via datasette-atom
-boto3==1.34.157
+boto3==1.36.26
     # via s3-credentials
-botocore==1.34.157
+botocore==1.36.26
     # via
     #   boto3
     #   s3transfer
-certifi==2024.7.4
+certifi==2025.1.31
     # via
     #   httpcore
     #   httpx
-click==8.1.7
+click==8.1.8
     # via
     #   click-default-group
     #   datasette
@@ -41,7 +37,7 @@ click-default-group==1.2.4
     # via
     #   datasette
     #   sqlite-utils
-datasette==0.64.8
+datasette==0.65.1
     # via
     #   -r requirements.in
     #   datasette-atom
@@ -65,16 +61,16 @@ datasette-template-sql==1.0.2
 feedgen==1.0.0
     # via datasette-atom
 flexcache==0.3
-    # via pint
-flexparser==0.3.1
-    # via pint
-gitdb==4.0.11
+    # via datasette
+flexparser==0.4
+    # via datasette
+gitdb==4.0.12
     # via gitpython
-gitpython==3.1.43
+gitpython==3.1.44
     # via -r requirements.in
-graphene==3.3
+graphene==3.4.3
     # via datasette-graphql
-graphql-core==3.2.3
+graphql-core==3.2.6
     # via
     #   datasette-graphql
     #   graphene
@@ -85,13 +81,13 @@ h11==0.14.0
     # via
     #   httpcore
     #   uvicorn
-httpcore==1.0.5
+httpcore==1.0.7
     # via httpx
-httpx==0.27.0
+httpx==0.28.1
     # via datasette
 hupper==1.12.1
     # via datasette
-idna==3.7
+idna==3.10
     # via
     #   anyio
     #   httpx
@@ -99,21 +95,21 @@ itsdangerous==2.2.0
     # via
     #   asgi-csrf
     #   datasette
-janus==1.0.0
+janus==2.0.0
     # via datasette
-jinja2==3.1.4
+jinja2==3.1.5
     # via datasette
 jmespath==1.0.1
     # via
     #   boto3
     #   botocore
-lxml==5.2.2
+lxml==5.3.1
     # via feedgen
-markupsafe==2.1.5
+markupsafe==3.0.2
     # via jinja2
 mergedeep==1.3.4
     # via datasette
-pint==0.24.3
+platformdirs==4.3.6
     # via datasette
 pluggy==1.5.0
     # via
@@ -123,30 +119,27 @@ python-dateutil==2.9.0.post0
     # via
     #   botocore
     #   feedgen
+    #   graphene
     #   sqlite-utils
-python-multipart==0.0.9
+python-multipart==0.0.20
     # via asgi-csrf
 pyyaml==6.0.2
     # via datasette
 s3-credentials==0.16.1
     # via -r requirements.in
-s3transfer==0.10.2
+s3transfer==0.11.2
     # via boto3
-six==1.16.0
-    # via
-    #   bleach
-    #   python-dateutil
-smmap==5.0.1
+six==1.17.0
+    # via python-dateutil
+smmap==5.0.2
     # via gitdb
 sniffio==1.3.1
-    # via
-    #   anyio
-    #   httpx
-soupsieve==2.5
+    # via anyio
+soupsieve==2.6
     # via beautifulsoup4
 sqlite-fts4==1.0.3
     # via sqlite-utils
-sqlite-utils==3.37
+sqlite-utils==3.38
     # via
     #   -r requirements.in
     #   datasette-graphql
@@ -154,13 +147,15 @@ tabulate==0.9.0
     # via sqlite-utils
 typing-extensions==4.12.2
     # via
+    #   anyio
+    #   beautifulsoup4
+    #   datasette
     #   flexcache
     #   flexparser
-    #   janus
-    #   pint
-urllib3==2.2.2
+    #   graphene
+urllib3==2.3.0
     # via botocore
-uvicorn==0.30.5
+uvicorn==0.34.0
     # via datasette
 webencodings==0.5.1
     # via bleach
