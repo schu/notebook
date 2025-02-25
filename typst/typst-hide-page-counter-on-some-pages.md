@@ -5,13 +5,13 @@ Show page counter only from page 3 onwards:
 ```
 #set page(
   [...]
-  footer: locate((loc) => {
-    if counter(page).at(loc).first() > 2 [
-      #align(center,
-        [#counter(page).display()],
-      )
+  footer: context {
+    if here().page() > 2 [
+      #align(center, [
+        #counter(page).display()
+      ])
     ]
-  })
+  }
 )
 ```
 
@@ -19,7 +19,7 @@ Hide page counter on certain pages with a list:
 
 ```
     ...
-    if counter(page).at(loc).first() not in (1, 2, 4, 7) [
+    if here().page() not in (1, 2, 4, 7) [
     ...
 ```
 
