@@ -22,7 +22,7 @@ python build_database.py
 
 ## Notes
 
-<!-- count starts -->11<!-- count ends --> notes so far.
+<!-- count starts -->12<!-- count ends --> notes so far.
 
 <!-- index starts -->
 ## demo
@@ -62,4 +62,8 @@ python build_database.py
 ## macos
 
 * [macOS: list allowed incoming connections](https://github.com/schu/notebook/blob/main/macos/macos-list-allowed-incoming-connections.md) - 2024-06-04
+
+## linux
+
+* [Pressure Stall Information (PSI) out-of-memory killer](https://github.com/schu/notebook/blob/main/linux/linux-pressure-stall-information-oom-killer.md) - 2025-10-22
 <!-- index ends -->
