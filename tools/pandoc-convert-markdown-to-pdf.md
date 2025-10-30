@@ -4,7 +4,7 @@
 as an alternative to the default LaTeX engine. For example:
 
 ```
-pandoc -M mainfont:'Helvetica Neue' --pdf-engine typst IN -o OUT.pdf
+pandoc -M mainfont:'Helvetica Neue' --pdf-engine typst IN.md -o OUT.pdf
 ```
 
 `-M mainfont:'...'` can be used to set the font. Currently, the `mainfont`
