@@ -22,7 +22,7 @@ python build_database.py
 
 ## Notes
 
-<!-- count starts -->12<!-- count ends --> notes so far.
+<!-- count starts -->13<!-- count ends --> notes so far.
 
 <!-- index starts -->
 ## demo
@@ -66,4 +66,8 @@ python build_database.py
 ## linux
 
 * [Pressure Stall Information (PSI) out-of-memory killer](https://github.com/schu/notebook/blob/main/linux/linux-pressure-stall-information-oom-killer.md) - 2025-10-22
+
+## tools
+
+* [Pandoc: convert Markdown to PDF (with Typst)](https://github.com/schu/notebook/blob/main/tools/pandoc-convert-markdown-to-pdf.md) - 2025-10-30
 <!-- index ends -->
