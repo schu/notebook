@@ -22,7 +22,7 @@ python build_database.py
 
 ## Notes
 
-<!-- count starts -->13<!-- count ends --> notes so far.
+<!-- count starts -->14<!-- count ends --> notes so far.
 
 <!-- index starts -->
 ## demo
@@ -70,4 +70,8 @@ python build_database.py
 ## tools
 
 * [Pandoc: convert Markdown to PDF (with Typst)](https://github.com/schu/notebook/blob/main/tools/pandoc-convert-markdown-to-pdf.md) - 2025-10-30
+
+## design
+
+* [Icon sets](https://github.com/schu/notebook/blob/main/design/icon-sets.md) - 2025-10-31
 <!-- index ends -->
